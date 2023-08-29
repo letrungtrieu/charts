@@ -1,0 +1,24 @@
+apiVersion: v1
+entries:
+  service:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-08-29T17:26:37.010122+07:00"
+    description: A Helm chart for Kubernetes
+    digest: a44bf49f12a1deddff8adcb9c4689298a16acbfe84947c666e0228a2585f26c3
+    name: service
+    type: application
+    urls:
+    - https://github.com/letrungtrieu/charts/packages/service-0.1.0.tgz
+    version: 0.1.0
+  webpage:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2023-08-29T17:26:37.010122+07:00"
+    description: A Helm chart for webpage deployment
+    digest: ab53e1e34cdb697ff84d4a08a34c45fdb4f2bdeabe886ea2cf476fe5cb082eb9
+    name: webpage
+    urls:
+    - https://github.com/letrungtrieu/charts/packages/webpage-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-08-29T17:26:37.0085003+07:00"

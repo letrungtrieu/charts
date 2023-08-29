@@ -49,10 +49,13 @@ ingress:
   path: "/"
   pathType: "Prefix"
   enabled: false
-  ingressClassName: ""
+  ingressClassName: "alb"
   annotations:
-    nginx.ingress.kubernetes.io/backend-protocol: "http"
-    nginx.ingress.kubernetes.io/proxy-buffer-size: "1024m"
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}, {"HTTP":80}]'
+    alb.ingress.kubernetes.io/backend-protocol: HTTP
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-southeast-1:888639110330:certificate/2f1e6a61-6c27-4e4c-844f-b83ba0a6fa65
+    alb.ingress.kubernetes.io/target-type: ip
     
   tls: []
   #  - secretName: chart-example-tls
@@ -72,7 +75,7 @@ resources: {}
   #   memory: 128Mi
 
 autoscaling:
-  enabled: true
+  enabled: false
   minReplicas: 1
   maxReplicas: 3
   targetCPUUtilizationPercentage: 80
